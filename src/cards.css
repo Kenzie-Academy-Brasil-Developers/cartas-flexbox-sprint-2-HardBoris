@@ -10,14 +10,22 @@ html {
 
 .card {
     /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    
 }
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 15px 0;
+    
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
@@ -37,11 +45,12 @@ html {
     padding: 5px 15px;
     border-top: 1px solid #D7DBDD;
     background-color: #EEF3F5;
+    
 }
 
 .cardGroup {
     /* display */
-  
+    display: flex;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
@@ -49,15 +58,35 @@ html {
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow: 1;
+      flex-shrink: initial;
+      flex-basis: 100px;
       border: none;
       border-radius: 0;
     }
   
     .cardGroup__card {
+      /* Gostaria de saber por que esta propriedade está separada do outro bloco?????? */
+      /* Também gostaria de saber qual a função ou intenção de colocar borde só de um lado??????? */
       border-left: 1px solid #D7DBDD;
     }
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-grow: 1;
+      flex-shrink: initial;
+      flex-basis: 100px;
     }
+
+@media (max-width: 320px) {
+  .cardGroup {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 321px) {
+  .cardGroup {
+    max-width: 710px;
+    margin: auto;
+  }
+}
