@@ -78,13 +78,14 @@ html {
       flex-basis: 100px;
     }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .cardGroup {
-    max-width: 100%;
+    max-width: 320px;
+    margin: auto;
   }
 }
 
-@media (min-width: 321px) {
+@media (min-width: 769px) {
   .cardGroup {
     max-width: 710px;
     margin: auto;
